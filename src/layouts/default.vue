@@ -1,17 +1,21 @@
+<script setup lang="ts">
+import CContainer from '~/components/UI/CContainer.vue';
+import CookieNotification from '~/components/CookieNotification.vue';
+import NavbarDefault from '~/components/Navbar/NavbarDefault.vue';
+</script>
+
 <template>
   <Body>
     <NuxtLoadingIndicator />
 
-    <header>
-      header
-    </header>
+    <main class="py-16">
+      <CContainer>
+        <navbar-default />
 
-    <main>
-      <NuxtPage />
+        <NuxtPage />
+      </CContainer>
     </main>
 
-    <footer>
-      footer
-    </footer>
+    <cookie-notification />
   </Body>
 </template>

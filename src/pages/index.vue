@@ -1,10 +1,22 @@
 <script setup lang="ts">
-const test = 'dsadasdsadas';
+
+import LanguageToggleButton from '~/components/UI/LanguageToggleButton.vue';
+import ThemeToggleButton from '~/components/UI/ThemeToggleButton.vue';
 </script>
 
 <template>
-  <div>
-    {{ test }}
+  <div class="flex gap-x-4">
+    <ULink to="/github">
+      github
+    </ULink>
+
+    <ULink to="/portfolio">
+      portfolio
+    </ULink>
+
+    <language-toggle-button />
+
+    <theme-toggle-button />
   </div>
 </template>
 
