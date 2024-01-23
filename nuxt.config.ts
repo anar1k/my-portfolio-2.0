@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   app: {
     head: {
@@ -20,7 +20,8 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/eslint-module',
     '@nuxtjs/i18n',
-    '@nuxt/ui'
+    '@nuxt/ui',
+    '@nuxt/image'
   ],
 
   srcDir: 'src/',
@@ -63,5 +64,9 @@ export default defineNuxtConfig({
     preference: 'system',
     fallback: 'dark',
     storageKey: 'color-mode'
+  },
+
+  ui: {
+    icons: ['simple-icons']
   }
 });

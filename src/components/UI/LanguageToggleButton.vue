@@ -8,13 +8,11 @@ const { locale, setLocale } = useI18n();
       variant="link"
       @click="setLocale(locale === 'ru' ? 'en' : 'ru')"
     >
-      <picture>
-        <img
-          :src="`/images/flags/${locale === 'ru' ? 'russia' : 'usa'}.png`"
-          class="h-4"
-          :alt="locale === 'ru' ? 'RU' : 'EN'"
-        >
-      </picture>
+      <nuxt-img
+        :src="`/images/flags/${locale === 'ru' ? 'russia' : 'usa'}.png`"
+        class="h-4"
+        :alt="locale === 'ru' ? 'RU' : 'EN'"
+      />
     </UButton>
   </UTooltip>
 </template>
