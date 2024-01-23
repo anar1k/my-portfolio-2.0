@@ -38,7 +38,7 @@ const links = computed<ILink[]>(() => (
         <ULink
           :to="item.href"
           active-class="text-primary"
-          inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
+          inactive-class="text-gray-700 dark:text-gray-200 hover:text-gray-500 dark:hover:text-gray-400 transition"
         >
           {{ item.label }}
         </ULink>

@@ -8,11 +8,15 @@ import NavbarDefault from '~/components/Navbar/NavbarDefault.vue';
   <Body>
     <NuxtLoadingIndicator />
 
-    <main class="py-16">
-      <CContainer>
-        <navbar-default />
+    <main class="py-4 sm:py-16">
+      <CContainer class="flex flex-col xl:flex-row xl:justify-between gap-6">
+        <aside class="bg-neutral-900 p-7 rounded-3xl border border-neutral-800">
+          <navbar-default />
+        </aside>
 
-        <NuxtPage />
+        <section class="bg-[#1e1e1f] p-7 rounded-3xl border border-neutral-800">
+          <NuxtPage />
+        </section>
       </CContainer>
     </main>
 
