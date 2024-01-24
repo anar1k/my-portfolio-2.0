@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import SidebarDefault from '~/components/Sidebar/SidebarDefault.vue';
 import NavbarDesktop from '~/components/Navbar/NavbarDesktop.vue';
 import NavbarMobile from '~/components/Navbar/NavbarMobile.vue';
 import CookieNotification from '~/components/CookieNotification.vue';
+import SidebarDefault from '~/components/Sidebar/SidebarDefault.vue';
 </script>
 
 <template>
@@ -10,23 +10,21 @@ import CookieNotification from '~/components/CookieNotification.vue';
     <NuxtLoadingIndicator />
 
     <main class="py-4 sm:py-16">
-      <u-container class="grid xl:grid-cols-[25%_1fr] gap-6">
-        <aside>
-          <u-card>
-            <sidebar-default />
-          </u-card>
+      <UContainer class="grid xl:grid-cols-[25%_1fr] gap-4 sm:gap-6">
+        <aside class="relative">
+          <sidebar-default />
         </aside>
 
         <section class="relative">
           <navbar-desktop />
 
-          <u-card>
+          <UCard>
             <NuxtPage />
-          </u-card>
+          </UCard>
 
           <navbar-mobile />
         </section>
-      </u-container>
+      </UContainer>
     </main>
 
     <cookie-notification />
