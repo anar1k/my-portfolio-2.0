@@ -18,6 +18,12 @@ export default defineAppConfig({
     container: {
       base: 'container',
       constrained: ''
+    },
+
+    divider: {
+      border: {
+        base: 'dark:border-gray-700'
+      }
     }
   }
 });
