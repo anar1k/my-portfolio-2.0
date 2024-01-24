@@ -10,7 +10,8 @@ const isAcceptCookies = useCookie<boolean | undefined>('accept-cookies');
            sm:mx-auto
            sm:w-1/2
            xl:w-1/4
-           bg-[#3f3f40]
+           bg-primary
+           dark:bg-gray-800
            rounded-lg
            shadow-xl
            px-6
