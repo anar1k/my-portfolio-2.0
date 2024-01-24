@@ -1,10 +1,13 @@
 <script setup lang="ts">
 
+import UiPageTitle from '~/components/Ui/UiPageTitle.vue';
 </script>
 
 <template>
   <div>
-    about page
+    <ui-page-title>
+      resume page
+    </ui-page-title>
   </div>
 </template>
 

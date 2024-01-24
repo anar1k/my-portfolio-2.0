@@ -1,10 +1,13 @@
 <script setup lang="ts">
 
+import UiPageTitle from '~/components/Ui/UiPageTitle.vue';
 </script>
 
 <template>
   <div>
-    git
+    <ui-page-title>
+      github
+    </ui-page-title>
   </div>
 </template>
 

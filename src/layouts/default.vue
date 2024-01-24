@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import CContainer from '~/components/UI/CContainer.vue';
+import UiContainer from '~/components/Ui/UiContainer.vue';
 import CookieNotification from '~/components/CookieNotification.vue';
-import NavbarDefault from '~/components/Navbar/NavbarDefault.vue';
 import NavbarMobile from '~/components/Navbar/NavbarMobile.vue';
-import LanguageToggleButton from '~/components/UI/LanguageToggleButton.vue';
-import ThemeToggleButton from '~/components/UI/ThemeToggleButton.vue';
+import UiCard from '~/components/Ui/UiCard.vue';
+import NavbarDesktop from '~/components/Navbar/NavbarDesktop.vue';
+import SidebarDefault from '~/components/Sidebar/SidebarDefault.vue';
 </script>
 
 <template>
@@ -12,21 +12,23 @@ import ThemeToggleButton from '~/components/UI/ThemeToggleButton.vue';
     <NuxtLoadingIndicator />
 
     <main class="py-4 sm:py-16">
-      <CContainer class="grid xl:grid-cols-[25%_1fr] gap-6">
+      <ui-container class="grid xl:grid-cols-[25%_1fr] gap-6">
         <aside>
-          <language-toggle-button />
-
-          <theme-toggle-button />
-
-          <navbar-default class="p-7 bg-neutral-900 rounded-3xl border border-[#383838]" />
+          <ui-card>
+            <sidebar-default />
+          </ui-card>
         </aside>
 
-        <section class="bg-[#1e1e1f] p-7 rounded-3xl border border-[#383838]">
-          <NuxtPage />
+        <section class="relative">
+          <navbar-desktop />
+
+          <ui-card>
+            <NuxtPage />
+          </ui-card>
 
           <navbar-mobile />
         </section>
-      </CContainer>
+      </ui-container>
     </main>
 
     <cookie-notification />

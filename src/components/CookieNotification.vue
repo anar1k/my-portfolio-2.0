@@ -7,8 +7,8 @@ const isAcceptCookies = useCookie<boolean | undefined>('accept-cookies');
     v-if="!isAcceptCookies"
     class="mx-4
            inset-x-0
-           md:mx-auto
-           md:w-1/2
+           sm:mx-auto
+           sm:w-1/2
            xl:w-1/4
            bg-[#3f3f40]
            rounded-lg
@@ -27,8 +27,16 @@ const isAcceptCookies = useCookie<boolean | undefined>('accept-cookies');
     <span class="text-white normal-case">{{ $t('cookie') }}! 🍪</span>
 
     <UButton
-      color="primary"
-      variant="ghost"
+      color="white"
+      :ui="{
+        variant: {
+          link: `text-white
+                 hover:text-neutral-400
+                 transition
+          `
+        }
+      }"
+      variant="link"
       icon="i-heroicons-x-mark"
       @click="isAcceptCookies = true"
     />

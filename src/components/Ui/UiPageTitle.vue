@@ -1,0 +1,30 @@
+<script setup lang="ts">
+
+</script>
+
+<template>
+  <h1
+    class="text-2xl
+           sm:font-semibold
+           sm:text-3xl
+           text-neutral-500
+           dark:text-neutral-50
+           inline-block
+           pb-2
+           sm:pb-4
+           capitalize
+           relative
+           after:absolute
+           after:bottom-0
+           after:left-0
+           after:w-8
+           after:sm:w-10
+           after:h-0.5
+           after:sm:h-1
+           after:rounded-2xl
+           after:bg-primary
+    "
+  >
+    <slot />
+  </h1>
+</template>

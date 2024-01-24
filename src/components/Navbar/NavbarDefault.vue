@@ -49,9 +49,9 @@ withDefaults(defineProps<IProps>(), {
     >
       <ULink
         :to="item.href"
-        class="flex flex-col items-center"
+        class="flex flex-col items-center transition"
         active-class="text-primary"
-        inactive-class="text-neutral-200 hover:text-neutral-500 hover:text-neutral-400 transition"
+        inactive-class="text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-500"
       >
         <UIcon
           v-if="hasIcons"
