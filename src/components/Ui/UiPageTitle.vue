@@ -7,13 +7,13 @@
     class="text-2xl
            sm:font-semibold
            sm:text-3xl
-           text-neutral-500
-           dark:text-neutral-50
            inline-block
            pb-2
            sm:pb-4
+           md:pb-5
            capitalize
            relative
+           mb-8
            after:absolute
            after:bottom-0
            after:left-0

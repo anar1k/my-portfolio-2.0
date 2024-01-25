@@ -2,18 +2,16 @@
 import NavbarDesktop from '~/components/Navbar/NavbarDesktop.vue';
 import NavbarMobile from '~/components/Navbar/NavbarMobile.vue';
 import CookieNotification from '~/components/CookieNotification.vue';
-import SidebarDefault from '~/components/Sidebar/SidebarDefault.vue';
+import SidebarDefault from '~/components/SidebarDefault.vue';
 </script>
 
 <template>
-  <Body>
+  <Body class="text-gray-700 dark:text-white">
     <NuxtLoadingIndicator />
 
-    <main class="py-4 sm:py-16">
+    <main class="pt-4 pb-20 sm:pt-16 sm:pb-24 lg:pb-16">
       <UContainer class="grid xl:grid-cols-[25%_1fr] gap-4 sm:gap-6">
-        <aside class="relative">
-          <sidebar-default />
-        </aside>
+        <sidebar-default />
 
         <section class="relative">
           <navbar-desktop />

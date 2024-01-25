@@ -1,10 +1,7 @@
 <script setup lang="ts">
+import type { IQueryRoute } from '~/types/route';
 const route = useRoute();
 const router = useRouter();
-
-interface IQueryRoute {
-  page?: string
-}
 
 interface IProps {
   total: number,
@@ -12,7 +9,7 @@ interface IProps {
 }
 
 withDefaults(defineProps<IProps>(), {
-  pageCount: 5,
+  pageCount: 10,
   total: 0
 });
 
@@ -45,7 +42,5 @@ const currentPage = computed<number>({
     v-model="currentPage"
     :page-count="pageCount"
     :total="total"
-    :prev-button="{ icon: 'i-heroicons-arrow-small-left-20-solid', label: 'Prev', color: 'gray' }"
-    :next-button="{ icon: 'i-heroicons-arrow-small-right-20-solid', trailing: true, label: 'Next', color: 'gray' }"
   />
 </template>

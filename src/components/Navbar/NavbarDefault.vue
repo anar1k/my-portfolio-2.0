@@ -51,7 +51,7 @@ withDefaults(defineProps<IProps>(), {
         :to="item.href"
         class="flex flex-col items-center transition"
         active-class="text-primary"
-        inactive-class="text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-500"
+        inactive-class="text-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-500"
       >
         <UIcon
           v-if="hasIcons"

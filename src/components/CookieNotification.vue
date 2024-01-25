@@ -32,7 +32,7 @@ const isAcceptCookies = useCookie<boolean | undefined>('accept-cookies');
       :ui="{
         variant: {
           link: `text-white
-                 hover:text-neutral-400
+                 hover:text-gray-400
                  transition
           `
         }

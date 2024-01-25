@@ -6,5 +6,6 @@
   "resume": "Resume",
   "portfolio": "Portfolio",
   "developer": "web developer",
-  "showContacts": "show contacts"
+  "showContacts": "show contacts",
+  "empty": "Nothing was found"
 }

@@ -7,7 +7,7 @@ import NavbarDefault from '~/components/Navbar/NavbarDefault.vue';
     class="absolute
            right-0
            top-0-0
-           z-10
+           z-50
            py-5
            px-10
            rounded-tr-3xl
@@ -21,6 +21,6 @@ import NavbarDefault from '~/components/Navbar/NavbarDefault.vue';
            lg:block
     "
   >
-    <navbar-default class="flex justify-around items-center gap-7 text-base font-bold" />
+    <navbar-default class="flex justify-around items-center gap-7 text-base font-medium" />
   </nav>
 </template>

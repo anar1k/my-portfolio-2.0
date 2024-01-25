@@ -1,35 +1,16 @@
 import { defineStore } from 'pinia';
-
-interface IUser {
-  login: string,
-  totalRepos: number
-}
-
-interface IRepo {
-  id: number,
-  html_url: string,
-  name: string,
-  description: string,
-  language: string,
-  stargazers_count: number,
-  size: number,
-  forks: number,
-}
+import type { IRepo } from '~/types/github';
 
 interface IState {
-  user: IUser,
+  totalRepos: number,
   repos: IRepo[]
 }
 
-const apiGithub = 'https://api.github.com';
+const apiGithub: string = 'https://api.github.com';
 
 export const useGithubStore = defineStore('github', {
   state: (): IState => ({
-    user: {
-      login: '',
-      totalRepos: 0
-    },
-
+    totalRepos: 0,
     repos: []
   }),
 
@@ -38,38 +19,30 @@ export const useGithubStore = defineStore('github', {
       try {
         interface IResponse {
           public_repos: number,
-          login: string
         }
 
-        const { data } = await useFetch<IResponse>(apiGithub + '/users/anar1k');
+        const { data } = await useFetch<IResponse>(apiGithub + '/users/anar1k', {
+          pick: ['public_repos']
+        });
 
-        this.$patch({
-          user: {
-            login: data.value?.login || '',
-            totalRepos: data.value?.public_repos || 0
-          }
-        });
+        this.totalRepos = data.value?.public_repos || 0;
       } catch (error: unknown) {
-        this.$patch({
-          user: {
-            login: '',
-            totalRepos: 0
-          }
-        });
+        this.totalRepos = 0;
 
         throw error;
       }
     },
 
-    async fetchRepos (page: number = 1): Promise<void> {
+    async fetchRepos (page: number = 1, perPage: number = 6): Promise<void> {
       try {
         const { data } = await useFetch<IRepo[]>(apiGithub + '/users/anar1k/repos', {
+
           params: {
-            per_page: 5,
+            per_page: perPage,
             page
           }
         });
-        console.log(data.value);
+
         this.repos = data.value || [];
       } catch (error: unknown) {
         this.repos = [];

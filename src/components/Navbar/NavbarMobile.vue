@@ -7,7 +7,7 @@ import NavbarDefault from '~/components/Navbar/NavbarDefault.vue';
     class="fixed
            inset-x-0
            bottom-0
-           z-10
+           z-50
            py-3
            rounded-t-2xl
            bg-white
