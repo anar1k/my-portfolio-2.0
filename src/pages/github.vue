@@ -1,30 +1,19 @@
 <script setup lang="ts">
 import UiPageTitle from '~/components/Ui/UiPageTitle.vue';
+import UiPagination from '~/components/Ui/UiPagination.vue';
 
-const route = useRoute();
-const router = useRouter();
+const githubStore = useGithubStore();
 
-interface IQueryRoute {
-  page?: string
-}
+const { fetchUser, fetchRepos } = githubStore;
 
-const currentPage = computed<number>({
-  get () {
-    const { page }: IQueryRoute = route.query;
+const { repos, user } = storeToRefs(githubStore);
 
-    const newPage = Number(page);
-
-    return !isNaN(newPage) ? newPage : 1;
-  },
-
-  set (newValue: number) {
-    router.push({
-      query: {
-        page: newValue
-      }
-    });
-  }
-});
+await fetchUser();
+await fetchRepos();
+console.log(repos.value);
+/* if (!repos.value.length) {
+  throw createError({ statusCode: 404, statusMessage: 'Product not found', fatal: true });
+} */
 </script>
 
 <template>
@@ -33,12 +22,17 @@ const currentPage = computed<number>({
       github
     </ui-page-title>
 
-    <UPagination
-      v-model="currentPage"
-      :page-count="5"
-      :total="100"
-      :prev-button="{ icon: 'i-heroicons-arrow-small-left-20-solid', label: 'Prev', color: 'gray' }"
-      :next-button="{ icon: 'i-heroicons-arrow-small-right-20-solid', trailing: true, label: 'Next', color: 'gray' }"
+    <div
+      v-for="item in repos"
+      :key="item.id"
+      class="h-12"
+    >
+      {{ item.name }}
+    </div>
+
+    <ui-pagination
+      :total="user.totalRepos"
+      @change="(newValue) => fetchRepos(newValue)"
     />
   </div>
 </template>
