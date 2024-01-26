@@ -25,7 +25,7 @@ const { colors } = storeToRefs(githubStore);
       rounded: 'rounded-xl'
     }"
   >
-    <div class="border dark:border-white rounded p-4 h-full grid">
+    <div class="border dark:border-white rounded p-4 h-full flex flex-col">
       <div class="flex items-center">
         <UIcon
           name="i-octicon-repo-16"
@@ -45,7 +45,7 @@ const { colors } = storeToRefs(githubStore);
         {{ repo.description }}
       </div>
 
-      <div class="text-xs flex gap-x-4 self-end">
+      <div class="mt-auto text-xs flex gap-x-4">
         <div
           v-if="repo.language"
           class="flex items-center"
