@@ -1,9 +1,10 @@
 import { defineStore } from 'pinia';
-import type { IRepo } from '~/types/github';
+import type { IColors, IRepo } from '~/types/github';
 
 interface IState {
   totalRepos: number,
-  repos: IRepo[]
+  repos: IRepo[],
+  colors: IColors
 }
 
 const apiGithub: string = 'https://api.github.com';
@@ -11,7 +12,8 @@ const apiGithub: string = 'https://api.github.com';
 export const useGithubStore = defineStore('github', {
   state: (): IState => ({
     totalRepos: 0,
-    repos: []
+    repos: [],
+    colors: {}
   }),
 
   actions: {
@@ -46,6 +48,22 @@ export const useGithubStore = defineStore('github', {
         this.repos = data.value || [];
       } catch (error: unknown) {
         this.repos = [];
+
+        throw error;
+      }
+    },
+
+    async fetchGithubColors (): Promise<void> {
+      try {
+        const { data } = await useFetch<unknown>('https://raw.githubusercontent.com/ozh/github-colors/master/colors.json');
+
+        if (typeof data.value === 'string') {
+          this.colors = JSON.parse(data.value);
+        } else {
+          this.colors = data.value as IColors || {};
+        }
+      } catch (error: unknown) {
+        this.colors = {};
 
         throw error;
       }

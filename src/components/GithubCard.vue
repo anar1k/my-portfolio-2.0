@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { IRepo } from '~/types/github';
-import RepoIcon from '~/components/icons/RepoIcon.vue';
 
 interface IProps {
   repo: IRepo | null
@@ -9,6 +8,9 @@ interface IProps {
 withDefaults(defineProps<IProps>(), {
   repo: null
 });
+
+const githubStore = useGithubStore();
+const { colors } = storeToRefs(githubStore);
 </script>
 
 <template>
@@ -17,14 +19,18 @@ withDefaults(defineProps<IProps>(), {
     :ui="{
       base: 'py-3 px-5',
       body: {
+        base: 'h-full',
         padding: ''
       },
       rounded: 'rounded-xl'
     }"
   >
-    <div class="border dark:border-white rounded p-4">
+    <div class="border dark:border-white rounded p-4 h-full grid">
       <div class="flex items-center">
-        <repo-icon class="mr-2" />
+        <UIcon
+          name="i-octicon-repo-16"
+          class="w-4 h-4 mr-2"
+        />
 
         <a
           :href="repo.html_url"
@@ -39,13 +45,14 @@ withDefaults(defineProps<IProps>(), {
         {{ repo.description }}
       </div>
 
-      <div class="mt-auto text-xs flex">
+      <div class="text-xs flex gap-x-4 self-end">
         <div
           v-if="repo.language"
-          class="flex items-center mr-4"
+          class="flex items-center"
         >
           <span
-            :style="{ backgroundColor: repo.language ? '' : '' }"
+            v-if="repo.language in colors"
+            :style="{ backgroundColor: colors[repo.language].color }"
             class="w-3 h-3 rounded-full relative"
           />
 
@@ -54,37 +61,25 @@ withDefaults(defineProps<IProps>(), {
 
         <div
           v-if="repo.stargazers_count"
-          class="flex items-center mr-4"
+          class="flex items-center hover:text-primary"
         >
-          <!--        <svg
-            class="w-4 h-4 fill-current mr-2"
-            aria-label="stars"
-            viewBox="0 0 16 16"
-            role="img"
-          >
-            <path
-              fill-rule="evenodd"
-              :d="icon.star"
-            />
-          </svg>-->
+          <UIcon
+            name="i-octicon-star-16"
+            class="w-4 h-4 mr-1"
+          />
+
           <span>{{ repo.stargazers_count }}</span>
         </div>
 
         <div
-          v-if="repo.size"
-          class="flex items-center"
+          v-if="repo.forks"
+          class="flex items-center hover:text-primary"
         >
-          <!--        <svg
-            class="w-4 h-4 fill-current mr-2"
-            aria-label="fork"
-            viewBox="0 0 16 16"
-            role="img"
-          >
-            <path
-              fill-rule="evenodd"
-              :d="icon.fork"
-            />
-          </svg>-->
+          <UIcon
+            name="i-octicon-repo-forked-16"
+            class="w-4 h-4 mr-1"
+          />
+
           <span>{{ repo.forks }}</span>
         </div>
       </div>

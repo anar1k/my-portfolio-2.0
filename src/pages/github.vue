@@ -6,7 +6,7 @@ import UiPagination from '~/components/Ui/UiPagination.vue';
 import UiLoading from '~/components/Ui/UiLoading.vue';
 
 const githubStore = useGithubStore();
-const { fetchUser, fetchRepos } = githubStore;
+const { fetchUser, fetchRepos, fetchGithubColors } = githubStore;
 const { repos, totalRepos } = storeToRefs(githubStore);
 
 const route = useRoute();
@@ -18,6 +18,7 @@ const elBlock = ref<HTMLElement | null>(null);
 
 await fetchUser();
 await fetchRepos(Number(page) || 1, perPage);
+await fetchGithubColors();
 
 const changePage = async (newPage: number) => {
   try {

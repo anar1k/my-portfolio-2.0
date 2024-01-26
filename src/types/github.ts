@@ -5,6 +5,12 @@ export interface IRepo {
     description: string,
     language: string,
     stargazers_count: number,
-    size: number,
     forks: number,
+}
+
+export interface IColors {
+    [key: string]: {
+        color: string,
+        url: string
+    };
 }

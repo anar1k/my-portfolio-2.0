@@ -20,7 +20,12 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
+    "@iconify-json/majesticons": "^1.1.11",
+    "@iconify-json/octicon": "^1.1.52",
+    "@iconify-json/ph": "^1.1.10",
     "@iconify-json/simple-icons": "^1.1.89",
+    "@iconify-json/tabler": "^1.1.104",
+    "@iconify-json/tdesign": "^1.1.3",
     "@nuxt/image": "^1.3.0",
     "@nuxt/ui": "^2.12.3",
     "@pinia/nuxt": "^0.5.1",

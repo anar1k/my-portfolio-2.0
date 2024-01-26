@@ -67,6 +67,6 @@ export default defineNuxtConfig({
   },
 
   ui: {
-    icons: ['simple-icons']
+    icons: ['simple-icons', 'octicon']
   }
 });
