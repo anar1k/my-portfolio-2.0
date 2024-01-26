@@ -19,8 +19,7 @@
            after:left-0
            after:w-8
            after:sm:w-10
-           after:h-0.5
-           after:sm:h-1
+           after:h-1
            after:rounded-2xl
            after:bg-primary
     "

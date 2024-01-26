@@ -29,7 +29,7 @@ withDefaults(defineProps<IProps>(), {
         <a
           :href="repo.html_url"
           target="_blank"
-          class="font-medium text-purple-800 dark:text-purple-200"
+          class="font-medium text-purple-800 dark:text-primary-200 hover:underline"
         >
           {{ repo.name }}
         </a>
