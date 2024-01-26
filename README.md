@@ -2,7 +2,7 @@
 
 SSR application of my portfolio
 
-Stack: Vue 3, @netlify/functions, tailwindcss, element-plus, Pinia, TS, Vue-yandex-maps
+Stack: Vue 3, Nuxt 3, tailwindcss, Nuxt UI, Pinia, @netlify/functions, TS
 
 ## Setup
 
