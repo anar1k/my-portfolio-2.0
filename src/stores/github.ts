@@ -36,9 +36,9 @@ export const useGithubStore = defineStore('github', {
     async fetchRepos (page: number = 1, perPage: number = 6): Promise<void> {
       try {
         const { data } = await useFetch<IRepo[]>(apiGithub + '/users/anar1k/repos', {
-
           params: {
             per_page: perPage,
+            sort: 'stars',
             page
           }
         });

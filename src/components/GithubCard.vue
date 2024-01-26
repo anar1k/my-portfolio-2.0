@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { IRepo } from '~/types/github';
+import RepoIcon from '~/components/icons/RepoIcon.vue';
 
 interface IProps {
   repo: IRepo | null
@@ -23,7 +24,7 @@ withDefaults(defineProps<IProps>(), {
   >
     <div class="border dark:border-white rounded p-4">
       <div class="flex items-center">
-        <UIcon name="i-heroicons-academic-cap mr-2" />
+        <repo-icon class="mr-2" />
 
         <a
           :href="repo.html_url"

@@ -11,6 +11,7 @@ module.exports = {
       code: 120,
       ignoreComments: true,
       ignoreUrls: true,
+      ignoreHTMLAttributeValues: true,
       ignoreRegExpLiterals: true,
       ignoreHTMLTextContents: true
     }],

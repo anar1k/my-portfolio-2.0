@@ -13,7 +13,7 @@ const route = useRoute();
 const { page }: IQueryRoute = route.query;
 
 const loading = ref<boolean>(false);
-const perPage = 6;
+const perPage = 8;
 const elBlock = ref<HTMLElement | null>(null);
 
 await fetchUser();
