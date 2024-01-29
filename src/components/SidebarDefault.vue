@@ -115,22 +115,22 @@ const isShowContacts = ref<boolean>(false);
             >
               <div
                 class="w-8
-                     sm:w-12
-                     h-8
-                     sm:h-12
-                     flex
-                     justify-center
-                     items-center
-                     rounded-lg
-                     sm:rounded-xl
-                     shadow-md
-                     bg-gradient-to-br
-                     from-primary-200
-                     to-white
-                     dark:from-primary-700
-                     dark:to-gray-800
-                     to-60%
-              "
+                       sm:w-12
+                       h-8
+                       sm:h-12
+                       flex
+                       justify-center
+                       items-center
+                       rounded-lg
+                       sm:rounded-xl
+                       shadow-md
+                       bg-gradient-to-br
+                       from-primary-200
+                       dark:from-primary-700
+                       to-white
+                       dark:to-gray-800
+                       to-60%
+                "
               >
                 <UIcon
                   :name="item.icon"
