@@ -12,7 +12,7 @@ import NavbarDefault from '~/components/Navbar/NavbarDefault.vue';
            px-10
            rounded-tr-3xl
            rounded-bl-3xl
-           bg-primary-50
+           shadow
            dark:bg-[#282829]
            border-b
            border-l
