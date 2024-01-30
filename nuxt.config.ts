@@ -74,7 +74,7 @@ export default defineNuxtConfig({
   googleFonts: {
     preload: true,
     families: {
-      Poppins: [300, 400, 500, 600, 700]
+      Mulish: [300, 400, 500, 600, 700]
     }
   }
 });

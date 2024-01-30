@@ -46,15 +46,14 @@ const isShowContacts = ref<boolean>(false);
         />
 
         <div class="xl:flex flex-col items-center">
-          <h2 class="text-base sm:text-2xl font-medium mb-2 sm:mb-4">
+          <h2 class="text-base sm:text-2xl font-bold mb-2 sm:mb-4 text-gray-900 dark:text-white">
             Абилов Анар И.
           </h2>
 
           <UBadge
-            class="capitalize shadow"
             variant="soft"
             :ui="{
-              font: 'font-light',
+              base: 'capitalize shadow',
               rounded: 'rounded-lg',
               size: {
                 sm: 'px-2 py-1 sm:px-4 sm:py-2'
@@ -107,7 +106,7 @@ const isShowContacts = ref<boolean>(false);
         <div class="overflow-hidden">
           <u-divider class="my-4 sm:my-8" />
 
-          <ul class="grid md:grid-cols-2 xl:grid-cols-1 gap-y-4">
+          <ul class="grid md:grid-cols-2 xl:grid-cols-1 gap-4 sm:gap-5 md:gap-7">
             <li
               v-for="(item, index) in contacts"
               :key="item.heading + index"
@@ -144,7 +143,15 @@ const isShowContacts = ref<boolean>(false);
                 </p>
 
                 <a
-                  class="text-xs sm:text-sm xl:font-light hover:text-primary hover:underline"
+                  class="text-sm
+                         sm:text-base
+                         font-light
+                         text-gray-900
+                         dark:text-white
+                         hover:text-primary-600
+                         dark:hover:text-primary-400
+                         hover:underline
+                  "
                   :href="item.href"
                   target="_blank"
                 >

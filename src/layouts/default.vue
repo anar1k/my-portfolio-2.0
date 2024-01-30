@@ -6,7 +6,7 @@ import SidebarDefault from '~/components/SidebarDefault.vue';
 </script>
 
 <template>
-  <Body class="text-gray-700 dark:text-gray-100">
+  <Body class="text-gray-700 dark:text-gray-300">
     <NuxtLoadingIndicator />
 
     <main class="pt-4 pb-20 sm:pt-16 sm:pb-24 lg:pb-16">
@@ -16,7 +16,7 @@ import SidebarDefault from '~/components/SidebarDefault.vue';
         <section class="relative">
           <navbar-desktop />
 
-          <UCard>
+          <UCard class="relative">
             <NuxtPage />
           </UCard>
 

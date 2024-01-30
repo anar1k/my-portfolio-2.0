@@ -18,7 +18,7 @@
       </div>
 
       <div class="pb-5 group-last:pb-0">
-        <h4 class="mb-2 capitalize sm:text-base">
+        <h4 class="mb-2 capitalize sm:text-base font-medium text-gray-900 dark:text-white">
           Company
         </h4>
 
@@ -26,11 +26,11 @@
           From — Until
         </div>
 
-        <p class="mb-2 text-gray-500">
-          Location
+        <p class="mb-2 text-gray-400 dark:text-gray-500">
+          Remote
         </p>
 
-        <p class="font-light text-gray-900 dark:text-gray-200">
+        <p>
           Position
         </p>
       </div>

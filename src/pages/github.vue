@@ -42,35 +42,33 @@ const changePage = async (newPage: number) => {
       github
     </ui-page-title>
 
-    <template v-if="repos.length">
-      <div class="relative">
-        <div class="p-0.5 grid md:grid-cols-2 gap-8 relative">
-          <github-card
-            v-for="item in repos"
-            :key="item.id"
-            :repo="item"
-          />
-        </div>
-
-        <ui-pagination
-          class="justify-center mt-8"
-          :total="totalRepos"
-          :page-count="perPage"
-          @change="changePage"
-        />
-
-        <ui-loading
-          :loading="loading"
-          class="rounded-xl"
-        />
-      </div>
-    </template>
-
     <div
-      v-else
+      v-if="!repos.length"
       class="grid md:grid-cols-2 gap-8"
     >
       {{ $t('empty') }}
     </div>
+
+    <template v-else>
+      <div class="p-0.5 grid md:grid-cols-2 gap-8">
+        <github-card
+          v-for="item in repos"
+          :key="item.id"
+          :repo="item"
+        />
+      </div>
+
+      <ui-pagination
+        class="justify-center mt-8"
+        :total="totalRepos"
+        :page-count="perPage"
+        @change="changePage"
+      />
+
+      <ui-loading
+        :loading="loading"
+        class="rounded-3xl"
+      />
+    </template>
   </div>
 </template>

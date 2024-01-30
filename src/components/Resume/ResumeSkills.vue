@@ -10,7 +10,7 @@ import UiCardGradient from '~/components/Ui/UiCardGradient.vue';
         :key="item"
       >
         <div class="text-sm sm:text-base mb-2">
-          <span class="font-medium">
+          <span class="font-medium text-gray-900 dark:text-white">
             Your Skill
           </span>
 

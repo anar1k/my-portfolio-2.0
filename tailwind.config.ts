@@ -5,7 +5,7 @@ export default <Partial<Config>>{
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Poppins"', ...defaultTheme.fontFamily.sans]
+        sans: ['"Mulish"', ...defaultTheme.fontFamily.sans]
       }
     }
   }

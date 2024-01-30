@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import UiCardGradient from '~/components/Ui/UiCardGradient.vue';
 </script>
 
@@ -25,7 +24,7 @@ import UiCardGradient from '~/components/Ui/UiCardGradient.vue';
         </div>
 
         <div>
-          <h4 class="text-base sm:text-lg mb-2 capitalize">
+          <h4 class="text-lg font-medium sm:text-xl mb-2 capitalize text-gray-900 dark:text-white">
             React
           </h4>
 

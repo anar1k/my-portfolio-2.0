@@ -1,27 +1,24 @@
 <script setup lang="ts">
 const list: string[] = [
-  'dsadas',
-  `Начальный опыт я получил на Geek University Frontend-разработки,
-  который длился больше года. Я открыл для себя программирование,
-  когда мне нужно было создать свой собственный веб-сайт, чтобы защитить диплом в университете,
-  где я получил степень бакалавра по специальности "Информационные системы и технологии".
-  Создав свой собственный веб-сайт, я с удовольствием углубился в программирование.
-  Вначале я много изучал, в основном JavaScript. Теперь я полноценный Frontend-разработчик.
-    `,
-  ''
+  'I am a programmer who aware of the tiny moments in a persons life that reveal greater truths.',
+  `My concentrate is Web Developer & Cybersecurity, my expertise lies within this both
+  jobs since 2011, and the main languages in my tech stack are Python, Javascript, React, HTML/CSS, Kotlin, etc.
+  `,
+  'I also have 1 year of experience in Back End Web Developer and 2 years in Data Analyst.',
+  'Apart from being a programmer, I enjoy most of my time being an aspirin musician, gamer, ' +
+  'watching comedy, action and horror genre movies, or spend my time with my family. I spend a ' +
+  'large amount of my free time exploring the latest technology advancements.'
 ];
 </script>
 
 <template>
-  <ul class="font-light text-sm">
+  <ul class="text-base font-light">
     <li
       v-for="(item, index) in list"
       :key="index"
       class="mb-3.5"
     >
       {{ item }}
-
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid asperiores consequatur dolorum error explicabo fuga fugiat, laborum maxime, nulla quaerat rem reprehenderit tenetur. Accusantium aliquam aut corporis deserunt dicta, dolor doloribus, et impedit incidunt ipsa iure iusto
     </li>
   </ul>
 </template>

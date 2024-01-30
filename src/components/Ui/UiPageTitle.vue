@@ -6,7 +6,9 @@
   <h1
     class="text-2xl
            sm:text-3xl
-           sm:font-semibold
+           font-bold
+           text-gray-900
+           dark:text-white
            inline-block
            pb-2
            sm:pb-4
