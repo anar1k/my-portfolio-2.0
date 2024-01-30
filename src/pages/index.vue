@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import UiPageTitle from '~/components/Ui/UiPageTitle.vue';
+import IndexCards from '~/components/Index/IndexCards.vue';
+import IndexText from '~/components/Index/IndexText.vue';
 </script>
 
 <template>
@@ -7,5 +9,9 @@ import UiPageTitle from '~/components/Ui/UiPageTitle.vue';
     <ui-page-title>
       About
     </ui-page-title>
+
+    <index-text class="mb-10" />
+
+    <index-cards />
   </div>
 </template>

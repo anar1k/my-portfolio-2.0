@@ -37,7 +37,7 @@ const isShowContacts = ref<boolean>(false);
 
 <template>
   <aside class="relative">
-    <UCard>
+    <UCard class="xl:sticky xl:top-16">
       <div class="flex items-center xl:flex-col gap-x-4 sm:gap-6">
         <nuxt-img
           class="w-20 sm:w-32 xl:w-40"

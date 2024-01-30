@@ -1,10 +1,15 @@
 <script setup lang="ts">
+interface IProps {
+  ui?: object
+}
 
+withDefaults(defineProps<IProps>(), {
+  ui: () => ({})
+});
 </script>
 
 <template>
   <UCard
-    class=""
     :ui="{
       base: 'relative z-[1] before:absolute before:z-[-1] before:inset-[1px] before:rounded-[inherit]',
       background: `
@@ -19,7 +24,8 @@
         dark:before:from-[#2D2D2E40]
         dark:before:to-[#1B1B1D00]
       `,
-      ring: ''
+      ring: '',
+      ...ui
     }"
   >
     <slot />

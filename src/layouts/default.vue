@@ -6,7 +6,7 @@ import SidebarDefault from '~/components/SidebarDefault.vue';
 </script>
 
 <template>
-  <Body class="text-gray-700 dark:text-white">
+  <Body class="text-gray-700 dark:text-gray-100">
     <NuxtLoadingIndicator />
 
     <main class="pt-4 pb-20 sm:pt-16 sm:pb-24 lg:pb-16">
