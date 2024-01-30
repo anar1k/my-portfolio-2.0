@@ -16,7 +16,7 @@ const list: string[] = [
     <li
       v-for="(item, index) in list"
       :key="index"
-      class="mb-3.5"
+      class="mb-6"
     >
       {{ item }}
     </li>
