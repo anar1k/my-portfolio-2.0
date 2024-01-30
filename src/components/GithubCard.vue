@@ -35,7 +35,7 @@ const { colors } = storeToRefs(githubStore);
         <a
           :href="repo.html_url"
           target="_blank"
-          class="font-medium text-purple-800 dark:text-primary-200 hover:underline"
+          class="font-medium text-purple-800 dark:text-primary-200 hover:underline text-sm"
         >
           {{ repo.name }}
         </a>

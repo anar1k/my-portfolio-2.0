@@ -144,7 +144,7 @@ const isShowContacts = ref<boolean>(false);
                 </p>
 
                 <a
-                  class="text-sm sm:text-base hover:text-primary hover:underline"
+                  class="text-xs sm:text-sm xl:font-light hover:text-primary hover:underline"
                   :href="item.href"
                   target="_blank"
                 >

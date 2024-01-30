@@ -5,8 +5,8 @@
 <template>
   <h1
     class="text-2xl
-           sm:font-semibold
            sm:text-3xl
+           sm:font-semibold
            inline-block
            pb-2
            sm:pb-4

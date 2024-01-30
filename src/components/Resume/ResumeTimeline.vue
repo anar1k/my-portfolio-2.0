@@ -18,11 +18,11 @@
       </div>
 
       <div class="pb-5 group-last:pb-0">
-        <h4 class="mb-2 capitalize font-medium sm:text-base">
+        <h4 class="mb-2 capitalize sm:text-base">
           Company
         </h4>
 
-        <div class="text-primary font-normal">
+        <div class="text-primary">
           From — Until
         </div>
 
@@ -30,7 +30,7 @@
           Location
         </p>
 
-        <p class="font-light text-gray-700 dark:text-gray-100 ">
+        <p class="font-light text-gray-900 dark:text-gray-200">
           Position
         </p>
       </div>

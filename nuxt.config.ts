@@ -21,7 +21,8 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     '@nuxtjs/i18n',
     '@nuxt/ui',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/google-fonts'
   ],
 
   srcDir: 'src/',
@@ -68,5 +69,12 @@ export default defineNuxtConfig({
 
   ui: {
     icons: ['simple-icons', 'octicon']
+  },
+
+  googleFonts: {
+    preload: true,
+    families: {
+      Poppins: [300, 400, 500, 600, 700]
+    }
   }
 });

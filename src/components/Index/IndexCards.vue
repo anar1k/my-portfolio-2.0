@@ -29,7 +29,7 @@ import UiCardGradient from '~/components/Ui/UiCardGradient.vue';
             React
           </h4>
 
-          <p class="font-light text-sm sm:text-base">
+          <p class="text-sm dark:text-gray-300">
             I build modern and advanced websites and applications with React or Expo by React Native.
           </p>
         </div>
