@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { IQueryRoute } from '~/types/route';
 import UiPageTitle from '~/components/Ui/UiPageTitle.vue';
-import GithubCard from '~/components/GithubCard.vue';
+import GithubCard from '~/components/Github/GithubCard.vue';
 import UiPagination from '~/components/Ui/UiPagination.vue';
 import UiLoading from '~/components/Ui/UiLoading.vue';
 

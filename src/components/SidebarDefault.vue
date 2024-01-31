@@ -148,8 +148,8 @@ const isShowContacts = ref<boolean>(false);
                          font-light
                          text-gray-900
                          dark:text-white
-                         hover:text-primary-600
-                         dark:hover:text-primary-400
+                         hover:text-primary-700
+                         dark:hover:text-primary-500
                          hover:underline
                   "
                   :href="item.href"
