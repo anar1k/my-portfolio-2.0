@@ -11,14 +11,7 @@ import PortfolioCard from '~/components/Portfolio/PortfolioCard.vue';
 
     <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
       <li
-        v-for="(item) in 5"
-        :key="item"
-      >
-        <portfolio-card :index="item % 2 === 0" />
-      </li>
-
-      <li
-        v-for="(item) in 5"
+        v-for="(item) in 10"
         :key="item"
       >
         <portfolio-card :index="item % 2 === 0" />
@@ -26,7 +19,3 @@ import PortfolioCard from '~/components/Portfolio/PortfolioCard.vue';
     </ul>
   </div>
 </template>
-
-<style scoped>
-
-</style>

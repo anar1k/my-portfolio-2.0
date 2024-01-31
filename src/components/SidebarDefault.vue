@@ -93,7 +93,7 @@ const isShowContacts = ref<boolean>(false);
         <span class="capitalize text-xs hidden sm:inline">{{ $t('showContacts') }}</span>
 
         <UIcon
-          class="block transition duration-200 sm:hidden"
+          class="block duration-200 sm:hidden"
           :class="[isShowContacts ? '-rotate-180' : '']"
           name="i-heroicons-chevron-down"
         />

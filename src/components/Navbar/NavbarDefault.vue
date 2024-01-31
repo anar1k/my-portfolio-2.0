@@ -49,7 +49,7 @@ withDefaults(defineProps<IProps>(), {
     >
       <ULink
         :to="item.href"
-        class="flex flex-col items-center transition"
+        class="flex flex-col items-center transition-colors"
         active-class="text-primary"
         inactive-class="text-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-500"
       >
