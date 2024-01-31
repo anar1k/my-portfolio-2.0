@@ -6,6 +6,7 @@ const { locale, setLocale } = useI18n();
   <UTooltip :text="$t('language')">
     <UButton
       variant="link"
+      :aria-label="$t('language')"
       @click="setLocale(locale === 'ru' ? 'en' : 'ru')"
     >
       <nuxt-img

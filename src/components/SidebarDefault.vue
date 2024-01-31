@@ -88,6 +88,7 @@ const isShowContacts = ref<boolean>(false);
              xl:hidden
       "
         type="button"
+        :aria-label="$t('showContacts')"
         @click="isShowContacts = !isShowContacts"
       >
         <span class="capitalize text-xs hidden sm:inline">{{ $t('showContacts') }}</span>

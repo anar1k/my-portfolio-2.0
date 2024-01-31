@@ -1,16 +1,36 @@
 <script setup lang="ts">
-defineProps<{index: boolean}>();
+import type { IProject } from '~/types/project';
+
+interface IProps {
+  project: IProject | null
+}
+
+withDefaults(defineProps<IProps>(), {
+  project: null
+});
 </script>
 
 <template>
-  <div class="grid auto-rows-[200px_auto] group cursor-pointer gap-y-3">
-    <div class="overflow-hidden rounded-2xl relative">
+  <UCard
+    v-if="project"
+    :ui="{
+      base: 'group duration-200',
+      shadow: 'shadow-md dark:shadow-md hover:shadow-primary-400 dark:hover:shadow-primary-700',
+      rounded: 'rounded-2xl',
+      body: {
+        base: 'grid auto-rows-[200px_auto]',
+        padding: ''
+      }
+    }"
+  >
+    <div class="relative overflow-hidden rounded-t-2xl">
       <NuxtPicture
         format="webp"
-        :src="`/images/portfolio/img${index ? 0 : 1}.png`"
+        :src="project.img"
         :img-attrs="{
           class: 'object-cover group-hover:scale-[1.1] h-full w-full transition-transform duration-200 ease-in',
-          alt: ''
+          alt: '',
+          loading: 'lazy'
         }"
       />
 
@@ -34,14 +54,14 @@ defineProps<{index: boolean}>();
       />
     </div>
 
-    <div class="pl-3 capitalize leading-5">
-      <div class="font-medium text-gray-900 dark:text-white group-hover:text-primary">
-        eazydeal
-      </div>
+    <div class="p-4 capitalize leading-5">
+      <h4 class="font-medium text-gray-900 dark:text-white group-hover:text-primary">
+        {{ project.title }}
+      </h4>
 
       <div class="text-gray-500 dark:text-gray-400 font-light">
-        dsada
+        {{ project.category }}
       </div>
     </div>
-  </div>
+  </UCard>
 </template>
