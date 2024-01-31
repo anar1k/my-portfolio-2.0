@@ -28,10 +28,9 @@ const isOpen = defineModel<boolean>();
       }"
     >
       <UButton
-        color="gray"
-        variant="ghost"
+        variant="soft"
         icon="i-heroicons-x-mark-20-solid"
-        class="absolute right-4 top-4"
+        class="absolute right-2 top-2"
         @click="isOpen = false"
       />
 
