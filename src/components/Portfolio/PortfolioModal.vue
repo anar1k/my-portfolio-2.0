@@ -34,10 +34,13 @@ const isOpen = defineModel<boolean>();
         @click="isOpen = false"
       />
 
-      <nuxt-img
+      <NuxtPicture
+        format="webp"
         :src="project.img"
-        class="rounded-lg"
-        alt="photo"
+        :img-attrs="{
+          class: 'w-full rounded-lg',
+          alt: 'photo',
+        }"
       />
 
       <div class="space-y-3 mt-4">
