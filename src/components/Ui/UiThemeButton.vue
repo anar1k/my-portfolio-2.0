@@ -14,12 +14,12 @@ const isDark = computed<boolean>({
 
 <template>
   <ClientOnly>
-    <UTooltip :text="$t('theme')">
+    <UTooltip :text="$t('toggles.theme')">
       <UButton
         :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'"
         color="gray"
         variant="ghost"
-        :aria-label="$t('theme')"
+        :aria-label="$t('toggles.theme')"
         square
         @click="isDark = !isDark"
       />

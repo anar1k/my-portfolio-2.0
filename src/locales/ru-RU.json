@@ -1,12 +1,20 @@
 {
-  "theme": "тема",
-  "language": "язык",
+  "toggles": {
+    "theme": "тема",
+    "language": "язык"
+  },
+  "nav": {
+    "about": "Обо мне",
+    "resume": "Резюме",
+    "portfolio": "Портфолио"
+  },
+  "sidebar": {
+    "showContacts": "показать контакты"
+  },
   "cookie": "Этот сайт использует cookie",
-  "about": "Обо мне",
-  "resume": "Резюме",
-  "portfolio": "Портфолио",
-  "developer": "веб разработчик",
-  "showContacts": "показать контакты",
   "empty": "Ничего не нашлось",
-  "linkToWebsite": "Перейти на сайт"
+  "linkToWebsite": "Перейти на сайт",
+  "remote": "удаленно",
+  "office": "офис",
+  "developer": "разработчик"
 }

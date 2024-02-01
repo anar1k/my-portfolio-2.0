@@ -1,12 +1,20 @@
 {
-  "theme": "theme",
-  "language": "language",
+  "toggles": {
+    "theme": "theme",
+    "language": "language"
+  },
+  "nav": {
+    "about": "About",
+    "resume": "Resume",
+    "portfolio": "Portfolio"
+  },
+  "sidebar": {
+    "showContacts": "show contacts"
+  },
   "cookie": "This site use cookies",
-  "about": "About",
-  "resume": "Resume",
-  "portfolio": "Portfolio",
-  "developer": "web developer",
-  "showContacts": "show contacts",
   "empty": "Nothing was found",
-  "linkToWebsite": "Go to the website"
+  "linkToWebsite": "Go to the website",
+  "remote": "remote",
+  "office": "office",
+  "developer": "developer"
 }

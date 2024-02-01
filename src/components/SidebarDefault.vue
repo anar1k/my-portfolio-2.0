@@ -60,7 +60,7 @@ const isShowContacts = ref<boolean>(false);
               }
             }"
           >
-            {{ $t('developer') }}
+            Web {{ $t('developer') }}
           </UBadge>
         </div>
       </div>
@@ -88,10 +88,10 @@ const isShowContacts = ref<boolean>(false);
              xl:hidden
       "
         type="button"
-        :aria-label="$t('showContacts')"
+        :aria-label="$t('sidebar.showContacts')"
         @click="isShowContacts = !isShowContacts"
       >
-        <span class="capitalize text-xs hidden sm:inline">{{ $t('showContacts') }}</span>
+        <span class="capitalize text-xs hidden sm:inline">{{ $t('sidebar.showContacts') }}</span>
 
         <UIcon
           class="block duration-200 sm:hidden"

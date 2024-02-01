@@ -4,7 +4,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Anar1k.dev',
+      title: 'anar1k.dev',
 
       htmlAttrs: {
         lang: 'ru'
