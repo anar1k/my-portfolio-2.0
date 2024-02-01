@@ -47,7 +47,7 @@ const isShowContacts = ref<boolean>(false);
 
         <div class="xl:flex flex-col items-center">
           <h2 class="text-base sm:text-2xl font-bold mb-2 sm:mb-4 text-gray-900 dark:text-white">
-            Абилов Анар И.
+            Анар Ильхамович
           </h2>
 
           <UBadge
