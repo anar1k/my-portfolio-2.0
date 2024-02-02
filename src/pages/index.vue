@@ -7,7 +7,7 @@ import IndexText from '~/components/Index/IndexText.vue';
 <template>
   <div>
     <ui-page-title>
-      About
+      {{ $t('title.about') }}
     </ui-page-title>
 
     <index-text class="mb-10" />

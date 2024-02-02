@@ -37,7 +37,7 @@ const handleCard = (project: IProject) => {
 <template>
   <div>
     <ui-page-title>
-      portfolio page
+      {{ $t('title.portfolio') }}
     </ui-page-title>
 
     <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">

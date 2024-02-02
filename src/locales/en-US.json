@@ -3,18 +3,19 @@
     "theme": "theme",
     "language": "language"
   },
-  "nav": {
+  "title": {
     "about": "About",
     "resume": "Resume",
     "portfolio": "Portfolio"
   },
   "sidebar": {
-    "showContacts": "show contacts"
+    "showContacts": "show contacts",
+    "name": "Anar Ilkhamovich"
   },
   "cookie": "This site use cookies",
   "empty": "Nothing was found",
+  "developer": "developer",
   "linkToWebsite": "Go to the website",
   "remote": "remote",
-  "office": "office",
-  "developer": "developer"
+  "office": "office"
 }

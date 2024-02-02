@@ -11,17 +11,17 @@ const links = computed<ILink[]>(() => (
   [
     {
       href: '/',
-      label: t('nav.about'),
+      label: t('title.about'),
       icon: 'i-heroicons-home'
     },
     {
       href: '/resume',
-      label: t('nav.resume'),
+      label: t('title.resume'),
       icon: 'i-heroicons-document'
     },
     {
       href: '/portfolio',
-      label: t('nav.portfolio'),
+      label: t('title.portfolio'),
       icon: 'i-heroicons-briefcase'
     },
     {

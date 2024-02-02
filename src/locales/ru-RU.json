@@ -3,13 +3,14 @@
     "theme": "тема",
     "language": "язык"
   },
-  "nav": {
+  "title": {
     "about": "Обо мне",
     "resume": "Резюме",
     "portfolio": "Портфолио"
   },
   "sidebar": {
-    "showContacts": "показать контакты"
+    "showContacts": "показать контакты",
+    "name": "Анар Ильхамович"
   },
   "cookie": "Этот сайт использует cookie",
   "empty": "Ничего не нашлось",

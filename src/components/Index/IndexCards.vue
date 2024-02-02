@@ -13,7 +13,7 @@ const technologies: ITechnology[] = [
   {
     id: 1,
     title: 'Vue',
-    description: 'I build modern and advanced websites and applications with Vue.',
+    description: 'I build modern and advanced websites and applications using the Vue framework.',
     icon: 'i-simple-icons-vuedotjs',
     iconColor: '#4FC08D'
   },
@@ -21,8 +21,7 @@ const technologies: ITechnology[] = [
   {
     id: 2,
     title: 'Nuxt',
-    description: `I use Nuxt, a modern JavaScript and Typescript
-      framework, while making dynamic and static websites and applications.`,
+    description: 'For the SSR application, I also use Nuxt.',
     icon: 'i-simple-icons-nuxtdotjs',
     iconColor: '#00DC82'
   },
@@ -43,7 +42,6 @@ const technologies: ITechnology[] = [
     icon: 'i-simple-icons-tailwindcss',
     iconColor: '#06B6D4'
   }
-
 ];
 </script>
 

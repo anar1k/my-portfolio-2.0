@@ -7,7 +7,7 @@ import ResumeSkills from '~/components/Resume/ResumeSkills.vue';
 <template>
   <div>
     <ui-page-title>
-      resume page
+      {{ $t('title.resume') }}
     </ui-page-title>
 
     <resume-timeline />
