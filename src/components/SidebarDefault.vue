@@ -39,11 +39,13 @@ const isShowContacts = ref<boolean>(false);
   <aside class="relative">
     <UCard class="xl:sticky xl:top-16">
       <div class="flex items-center xl:flex-col gap-x-4 sm:gap-6">
-        <nuxt-img
-          class="w-20 sm:w-32 xl:w-40 rounded-full"
-          src="/images/avatar.webp"
-          alt="avatar"
-        />
+        <div class="w-20 sm:w-32 xl:w-40 h-20 sm:h-32 xl:h-40">
+          <nuxt-img
+            class="rounded-full"
+            src="/images/avatar.webp"
+            alt="avatar"
+          />
+        </div>
 
         <div class="xl:flex flex-col items-center">
           <h2 class="text-base sm:text-2xl font-bold mb-2 sm:mb-4 text-gray-900 dark:text-white">
