@@ -16,9 +16,11 @@ const loading = ref<boolean>(false);
 const perPage = 8;
 const elBlock = ref<HTMLElement | null>(null);
 
-await fetchUser();
-await fetchRepos(Number(page) || 1, perPage);
-await fetchGithubColors();
+await Promise.all([
+  fetchUser(),
+  fetchRepos(Number(page) || 1, perPage),
+  fetchGithubColors()
+]);
 
 const changePage = async (newPage: number) => {
   try {

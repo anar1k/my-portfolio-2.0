@@ -1,48 +1,11 @@
 <script setup lang="ts">
 import UiCardGradient from '~/components/Ui/UiCardGradient.vue';
 
-interface ITechnology {
-  id: number,
-  title: string,
-  description: string,
-  icon: `i-${'heroicons' | 'simple-icons'}-${string}`,
-  iconColor: string
-}
+const aboutStore = useABoutStore();
 
-const technologies: ITechnology[] = [
-  {
-    id: 1,
-    title: 'Vue',
-    description: 'I build modern and advanced websites and applications using the Vue framework.',
-    icon: 'i-simple-icons-vuedotjs',
-    iconColor: '#4FC08D'
-  },
+const { technologies } = storeToRefs(aboutStore);
 
-  {
-    id: 2,
-    title: 'Nuxt',
-    description: 'For the SSR application, I also use Nuxt.',
-    icon: 'i-simple-icons-nuxtdotjs',
-    iconColor: '#00DC82'
-  },
-
-  {
-    id: 3,
-    title: 'TypeScript',
-    description: 'I use TypeScript to develop and maintain JavaScript application code by adding static typing.',
-    icon: 'i-simple-icons-typescript',
-    iconColor: '#3178C6'
-  },
-
-  {
-    id: 4,
-    title: 'Tailwind CSS',
-    description: `I use Tailwind CSS to quickly and easily develop the user interface of web applications
-      using a set of pre-designed classes.`,
-    icon: 'i-simple-icons-tailwindcss',
-    iconColor: '#06B6D4'
-  }
-];
+const { locale } = useI18n();
 </script>
 
 <template>
@@ -62,6 +25,7 @@ const technologies: ITechnology[] = [
       >
         <div>
           <UIcon
+            dynamic
             :name="item.icon"
             class="w-12 h-12"
             :style="{
@@ -76,7 +40,7 @@ const technologies: ITechnology[] = [
           </h4>
 
           <p class="text-sm dark:text-gray-300">
-            {{ item.description }}
+            {{ item.description[locale] }}
           </p>
         </div>
       </ui-card-gradient>
