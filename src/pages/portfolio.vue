@@ -3,27 +3,13 @@ import UiPageTitle from '~/components/Ui/UiPageTitle.vue';
 import PortfolioCard from '~/components/Portfolio/PortfolioCard.vue';
 import type { IProject } from '~/types/project';
 import PortfolioModal from '~/components/Portfolio/PortfolioModal.vue';
+import { usePortfolioStore } from '~/stores/portfolio';
 
-const list: IProject[] = [
-  {
-    id: 1,
-    title: 'It Never Ends Ft. Julian Wilt',
-    category: 'Song',
-    description: 'This song was made for gear testing and to honour the work of the great band, Bring Me The Horizon.',
-    img: '/images/portfolio/img0.png',
-    date: 'January 2023',
-    link: 'https://ite.aghea.site/'
-  },
-  {
-    id: 2,
-    title: 'eeeeeeeeeeeeeeeee',
-    category: 'test',
-    description: 'dsadsadadasdas',
-    img: '/images/portfolio/img1.png',
-    date: 'January 2023',
-    link: 'https://ite.aghea.site/'
-  }
-];
+const portfolioStore = usePortfolioStore();
+const { fetchProjects } = portfolioStore;
+const { projects } = storeToRefs(portfolioStore);
+
+await fetchProjects();
 
 const isOpen = ref(false);
 const selectedProject = ref<IProject | null>(null);
@@ -40,9 +26,16 @@ const handleCard = (project: IProject) => {
       {{ $t('title.portfolio') }}
     </ui-page-title>
 
-    <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+    <div v-if="!projects.length">
+      {{ $t('empty') }}
+    </div>
+
+    <ul
+      v-else
+      class="grid md:grid-cols-2 lg:grid-cols-3 gap-7"
+    >
       <li
-        v-for="item in list"
+        v-for="item in projects"
         :key="item.id"
       >
         <button

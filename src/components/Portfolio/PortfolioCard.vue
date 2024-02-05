@@ -8,6 +8,8 @@ interface IProps {
 withDefaults(defineProps<IProps>(), {
   project: null
 });
+
+const { locale } = useI18n();
 </script>
 
 <template>
@@ -60,7 +62,7 @@ withDefaults(defineProps<IProps>(), {
       </h4>
 
       <div class="text-gray-500 dark:text-gray-400 font-light">
-        {{ project.category }}
+        {{ project.category[locale] }}
       </div>
     </div>
   </UCard>

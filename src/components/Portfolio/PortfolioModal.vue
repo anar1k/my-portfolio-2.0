@@ -1,15 +1,29 @@
 <script setup lang="ts">
 import type { IProject } from '~/types/project';
+import { isCorrectDate } from '~/utils';
 
 interface IProps {
   project: IProject | null
 }
 
-withDefaults(defineProps<IProps>(), {
+const props = withDefaults(defineProps<IProps>(), {
   project: null
 });
 
 const isOpen = defineModel<boolean>();
+const { locale } = useI18n();
+
+const getDate = computed<string>(() => {
+  if (!props.project?.date) { return ''; }
+
+  const { date } = props.project;
+
+  const newDate: Date = new Date(date);
+
+  if (!isCorrectDate(newDate)) { return ''; }
+
+  return `${newDate.toLocaleString(locale.value, { month: 'long' })} ${newDate.getFullYear()}`;
+});
 </script>
 
 <template>
@@ -51,11 +65,11 @@ const isOpen = defineModel<boolean>();
         <ul class="text-xs flex gap-x-2 divide-x divide-gray-300 dark:divide-gray-700 text-gray-500">
           <li
             v-if="project.date"
-            class="flex items-center gap-x-2"
+            class="flex items-center gap-x-2 capitalize"
           >
             <UIcon name="i-heroicons-calendar-days" />
 
-            {{ project.date }}
+            {{ getDate }}
           </li>
 
           <li
@@ -64,7 +78,7 @@ const isOpen = defineModel<boolean>();
           >
             <UIcon name="i-heroicons-tag" />
 
-            {{ project.category }}
+            {{ project.category[locale] }}
           </li>
 
           <li
@@ -86,7 +100,7 @@ const isOpen = defineModel<boolean>();
         </ul>
 
         <p class="font-light text-sm">
-          {{ project.description }}
+          {{ project.description[locale] }}
         </p>
       </div>
     </UCard>
