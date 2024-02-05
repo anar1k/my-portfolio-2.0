@@ -10,10 +10,10 @@
   },
   "sidebar": {
     "showContacts": "show contacts",
-    "name": "Anar Ilkhamovich"
+    "name": "Anar Ilkhamovich",
+    "developer": "developer"
   },
   "cookie": "This site use cookies",
   "empty": "Nothing was found",
-  "developer": "developer",
-  "linkToWebsite": "Go to the website"
+  "linkToWebsite": "View Project"
 }

@@ -10,7 +10,7 @@ const { locale, setLocale } = useI18n();
       @click="setLocale(locale === 'ru' ? 'en' : 'ru')"
     >
       <nuxt-img
-        :src="`/images/flags/${locale === 'ru' ? 'russia' : 'usa'}.png`"
+        :src="`/images/flags/${locale === 'ru' ? 'russia' : 'usa'}.webp`"
         class="h-4"
         :alt="locale === 'ru' ? 'RU' : 'EN'"
       />

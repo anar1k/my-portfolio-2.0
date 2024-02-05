@@ -74,7 +74,7 @@ const getDate = computed<string>(() => {
 
           <li
             v-if="project.category"
-            class="first:pl-0 pl-2 flex items-center gap-x-2"
+            class="first:pl-0 pl-2 flex items-center gap-x-2 capitalize"
           >
             <UIcon name="i-heroicons-tag" />
 
@@ -85,17 +85,15 @@ const getDate = computed<string>(() => {
             v-if="project.link"
             class="first:pl-0 pl-2"
           >
-            <UTooltip :text="$t('linkToWebsite')">
-              <a
-                :href="project.link"
-                class="hover:text-primary flex items-center gap-x-2"
-                target="_blank"
-              >
-                <UIcon name="i-heroicons-globe-alt" />
+            <a
+              :href="project.link"
+              class="hover:text-primary flex items-center gap-x-2"
+              target="_blank"
+            >
+              <UIcon name="i-heroicons-globe-alt" />
 
-                <span>View Project</span>
-              </a>
-            </UTooltip>
+              <span>{{ $t('linkToWebsite') }}</span>
+            </a>
           </li>
         </ul>
 

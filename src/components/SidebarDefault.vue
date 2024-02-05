@@ -63,7 +63,7 @@ const isShowContacts = ref<boolean>(false);
               }
             }"
           >
-            Web {{ $t('developer') }}
+            Web {{ $t('sidebar.developer') }}
           </UBadge>
         </div>
       </div>
