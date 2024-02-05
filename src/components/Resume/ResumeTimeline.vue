@@ -1,35 +1,15 @@
 <script setup lang="ts">
-interface ISection {
-  id: number,
-  title: string,
-  period: string,
-  position: string,
-  employment: string
-}
+const resumeStore = useResumeStore();
 
-const sections: ISection[] = [
-  {
-    id: 1,
-    title: 'Company',
-    period: 'From — Until',
-    employment: 'Remote',
-    position: 'position'
-  },
+const { timelineItems } = storeToRefs(resumeStore);
 
-  {
-    id: 2,
-    title: 'Company',
-    period: 'From — Until',
-    employment: 'Remote',
-    position: 'position'
-  }
-];
+const { locale } = useI18n();
 </script>
 
 <template>
   <ul class="text-sm mb-7">
     <li
-      v-for="item in sections"
+      v-for="item in timelineItems"
       :key="item.id"
       class="flex gap-x-12 group"
     >
@@ -42,16 +22,16 @@ const sections: ISection[] = [
       </div>
 
       <div class="pb-5 group-last:pb-0">
-        <h4 class="mb-2 capitalize sm:text-base font-medium text-gray-900 dark:text-white">
-          {{ item.title }}
+        <h4 class="mb-2 sm:text-base font-medium text-gray-900 dark:text-white">
+          {{ typeof item.title === 'string' ? item.title : item.title[locale] }}
         </h4>
 
         <div class="text-primary">
-          {{ item.period }}
+          {{ typeof item.period === 'string' ? item.period : item.period[locale] }}
         </div>
 
         <p class="mb-2 text-gray-400 dark:text-gray-500">
-          {{ item.employment }}
+          {{ item.employment[locale] }}
         </p>
 
         <p>

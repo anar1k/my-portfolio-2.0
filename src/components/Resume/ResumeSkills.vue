@@ -11,7 +11,22 @@ const skills: ISkill[] = [
   {
     id: 1,
     label: 'HTML',
-    value: 88
+    value: 95
+  },
+  {
+    id: 2,
+    label: 'CSS',
+    value: 82
+  },
+  {
+    id: 3,
+    label: 'JavaScript',
+    value: 74
+  },
+  {
+    id: 4,
+    label: 'Vue',
+    value: 85
   }
 ];
 </script>

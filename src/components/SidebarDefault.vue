@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import UiThemeButton from '~/components/Ui/UiThemeButton.vue';
 import UiLanguageButton from '~/components/Ui/UiLanguageButton.vue';
+import type { TIcon } from '~/types/icon';
 
 interface IContact {
-  icon: `i-${'heroicons' | 'simple-icons'}-${string}`,
+  icon: TIcon,
   heading: string
   label: string,
   href: string,

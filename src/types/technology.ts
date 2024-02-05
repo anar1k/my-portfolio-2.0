@@ -1,9 +1,10 @@
-import type { TLanguage } from '~/types/language';
+import type { TLanguageText } from '~/types/language';
+import type { TIcon } from '~/types/icon';
 
 export interface ITechnology {
     id: number,
     title: string,
-    description: Record<TLanguage, string>,
-    icon: `i-${'heroicons' | 'simple-icons'}-${string}`,
+    description: TLanguageText,
+    icon: TIcon,
     iconColor: string
 }

@@ -1,10 +1,12 @@
 <script setup lang="ts">
+import type { TIcon } from '~/types/icon';
+
 const { t } = useI18n();
 
 interface ILink {
   href: string,
   label: string,
-  icon: `i-${'heroicons' | 'simple-icons'}-${string}`
+  icon: TIcon
 }
 
 const links = computed<ILink[]>(() => (

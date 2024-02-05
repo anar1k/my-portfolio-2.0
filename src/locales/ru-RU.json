@@ -14,8 +14,6 @@
   },
   "cookie": "Этот сайт использует cookie",
   "empty": "Ничего не нашлось",
-  "linkToWebsite": "Перейти на сайт",
-  "remote": "удаленно",
-  "office": "офис",
-  "developer": "разработчик"
+  "developer": "разработчик",
+  "linkToWebsite": "Перейти на сайт"
 }

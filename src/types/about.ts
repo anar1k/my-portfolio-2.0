@@ -1,3 +1,3 @@
-import type { TLanguage } from '~/types/language';
+import type { TLanguageText } from '~/types/language';
 
-export type TAboutItem = Record<TLanguage, string>
+export type TAboutItem = TLanguageText
