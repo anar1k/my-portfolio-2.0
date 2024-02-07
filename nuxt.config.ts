@@ -21,7 +21,8 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     '@nuxtjs/i18n',
     '@nuxt/ui',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/google-fonts'
   ],
 
   srcDir: 'src/',
