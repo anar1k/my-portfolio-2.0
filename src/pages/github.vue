@@ -41,7 +41,7 @@ const changePage = async (newPage: number) => {
 <template>
   <div ref="elBlock">
     <ui-page-title>
-      github
+      GitHub
     </ui-page-title>
 
     <div

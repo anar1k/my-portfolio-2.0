@@ -17,7 +17,12 @@ import SidebarDefault from '~/components/SidebarDefault.vue';
           <navbar-desktop />
 
           <UCard class="relative">
-            <NuxtPage />
+            <NuxtPage
+              :transition="{
+                name: 'page',
+                mode: 'out-in',
+              }"
+            />
           </UCard>
 
           <navbar-mobile />
@@ -28,3 +33,15 @@ import SidebarDefault from '~/components/SidebarDefault.vue';
     <cookie-notification />
   </Body>
 </template>
+
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.5s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+</style>

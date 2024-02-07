@@ -72,6 +72,7 @@ export default defineNuxtConfig({
   },
 
   googleFonts: {
+    preload: true,
     families: {
       Mulish: {
         wght: [300, 400, 500, 600, 700]
@@ -80,10 +81,7 @@ export default defineNuxtConfig({
   },
 
   image: {
-    provider: 'netlify',
-    netlify: {
-      baseURl: process.env.IMAGES_URL
-    }
+    provider: 'netlify'
   },
 
   postcss: {

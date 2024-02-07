@@ -45,6 +45,7 @@ const isShowContacts = ref<boolean>(false);
             class="rounded-full"
             src="/images/avatar.webp"
             alt="avatar"
+            preload
           />
         </div>
 
