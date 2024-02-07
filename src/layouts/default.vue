@@ -7,7 +7,7 @@ import SidebarDefault from '~/components/SidebarDefault.vue';
 
 <template>
   <Body class="text-gray-700 dark:text-gray-300">
-    <NuxtLoadingIndicator :height="5" />
+    <NuxtLoadingIndicator :height="4" />
 
     <main class="pt-4 pb-20 sm:pt-16 sm:pb-24 lg:pb-16">
       <UContainer class="grid xl:grid-cols-[25%_1fr] gap-4 sm:gap-6">
