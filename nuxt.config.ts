@@ -73,7 +73,20 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      Mulish: true
+      Mulish: {
+        wght: [300, 400, 500, 600, 700]
+      }
+    }
+  },
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+      cssnano:
+          process.env.NODE_ENV === 'production'
+            ? { preset: ['default', { discardComments: { removeAll: true } }] }
+            : false // disable cssnano when not in production
     }
   }
 });
