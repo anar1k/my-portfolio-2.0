@@ -37,7 +37,7 @@ import SidebarDefault from '~/components/SidebarDefault.vue';
 <style>
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.5s;
+  transition: all 0.4s ease-out;
 }
 .page-enter-from,
 .page-leave-to {
