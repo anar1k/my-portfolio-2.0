@@ -68,5 +68,11 @@ export default defineNuxtConfig({
 
   ui: {
     icons: ['simple-icons', 'octicon']
+  },
+
+  googleFonts: {
+    families: {
+      Mulish: true
+    }
   }
 });
