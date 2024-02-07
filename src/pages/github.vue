@@ -14,7 +14,6 @@ const { page }: IQueryRoute = route.query;
 
 const loading = ref<boolean>(false);
 const perPage = 8;
-const elBlock = ref<HTMLElement | null>(null);
 
 await Promise.all([
   fetchUser(),
@@ -28,9 +27,9 @@ const changePage = async (newPage: number) => {
 
     await fetchRepos(newPage, perPage);
 
-    elBlock.value?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+    window.scroll({
+      top: 0,
+      behavior: 'smooth'
     });
   } finally {
     loading.value = false;
@@ -39,7 +38,7 @@ const changePage = async (newPage: number) => {
 </script>
 
 <template>
-  <div ref="elBlock">
+  <div>
     <ui-page-title>
       GitHub
     </ui-page-title>
