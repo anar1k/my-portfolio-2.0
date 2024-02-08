@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import NavbarDesktop from '~/components/Navbar/NavbarDesktop.vue';
 import NavbarMobile from '~/components/Navbar/NavbarMobile.vue';
-import CookieNotification from '~/components/CookieNotification.vue';
-import SidebarDefault from '~/components/SidebarDefault.vue';
+import CookieNotification from '~/components/Ui/CookieNotification.vue';
+import SidebarDefault from '~/components/Sidebar/SidebarDefault.vue';
 
 const { locale, t } = useI18n();
 
