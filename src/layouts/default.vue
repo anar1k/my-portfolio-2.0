@@ -3,6 +3,20 @@ import NavbarDesktop from '~/components/Navbar/NavbarDesktop.vue';
 import NavbarMobile from '~/components/Navbar/NavbarMobile.vue';
 import CookieNotification from '~/components/CookieNotification.vue';
 import SidebarDefault from '~/components/SidebarDefault.vue';
+
+const { locale, t } = useI18n();
+
+useHead({
+  htmlAttrs: {
+    lang: locale
+  },
+
+  title: 'anar1k.dev',
+
+  meta: [
+    { name: 'description', content: t('description') }
+  ]
+});
 </script>
 
 <template>

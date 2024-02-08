@@ -1,16 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: false },
-
-  app: {
-    head: {
-      title: 'anar1k.dev',
-
-      htmlAttrs: {
-        lang: 'ru'
-      }
-    }
-  },
+  devtools: { enabled: true },
 
   components: {
     dirs: []
@@ -56,7 +46,6 @@ export default defineNuxtConfig({
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'lang',
-      alwaysRedirect: false,
       fallbackLocale: 'ru'
     }
   },

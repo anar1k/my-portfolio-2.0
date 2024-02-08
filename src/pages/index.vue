@@ -3,6 +3,14 @@ import UiPageTitle from '~/components/Ui/UiPageTitle.vue';
 import IndexCards from '~/components/Index/IndexCards.vue';
 import IndexText from '~/components/Index/IndexText.vue';
 
+const { t } = useI18n();
+
+useHead({
+  titleTemplate: (pageTitle) => {
+    return `${t('title.about')} - ${pageTitle}`;
+  }
+});
+
 const aboutStore = useABoutStore();
 
 const { fetchTechnologies, fetchAbout } = aboutStore;

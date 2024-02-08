@@ -8,8 +8,9 @@ const isAcceptCookies = useCookie<boolean | undefined>('accept-cookies');
     class="mx-4
            inset-x-0
            sm:mx-auto
-           sm:w-1/2
-           xl:w-1/4
+           sm:w-3/4
+           md:w-1/2
+           xl:w-1/3
            bg-primary
            dark:bg-gray-800
            rounded-lg

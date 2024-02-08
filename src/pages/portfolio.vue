@@ -5,6 +5,14 @@ import type { IProject } from '~/types/project';
 import PortfolioModal from '~/components/Portfolio/PortfolioModal.vue';
 import { usePortfolioStore } from '~/stores/portfolio';
 
+const { t } = useI18n();
+
+useHead({
+  titleTemplate: (pageTitle) => {
+    return `${t('title.portfolio')} - ${pageTitle}`;
+  }
+});
+
 const portfolioStore = usePortfolioStore();
 const { fetchProjects } = portfolioStore;
 const { projects } = storeToRefs(portfolioStore);

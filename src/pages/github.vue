@@ -5,6 +5,12 @@ import GithubCard from '~/components/Github/GithubCard.vue';
 import UiPagination from '~/components/Ui/UiPagination.vue';
 import UiLoading from '~/components/Ui/UiLoading.vue';
 
+useHead({
+  titleTemplate: (pageTitle) => {
+    return `GitHub - ${pageTitle}`;
+  }
+});
+
 const githubStore = useGithubStore();
 const { fetchUser, fetchRepos, fetchGithubColors } = githubStore;
 const { repos, totalRepos } = storeToRefs(githubStore);
