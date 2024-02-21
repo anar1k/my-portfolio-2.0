@@ -15,7 +15,7 @@ const { locale } = useI18n();
     >
       <div class="flex flex-col items-center">
         <div
-          class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary shadow-[0_0_0_4px] shadow-gray-200 dark:shadow-gray-700"
+          class="size-1.5 sm:size-2 rounded-full bg-primary shadow-[0_0_0_4px] shadow-gray-200 dark:shadow-gray-700"
         />
 
         <div class="w-[1px] h-full bg-gray-200 dark:bg-gray-700 group-last:hidden" />

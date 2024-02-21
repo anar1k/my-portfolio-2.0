@@ -29,7 +29,7 @@ const { colors } = storeToRefs(githubStore);
       <div class="flex items-center">
         <UIcon
           name="i-octicon-repo-16"
-          class="w-4 h-4 mr-2"
+          class="size-4 mr-2"
         />
 
         <a
@@ -53,7 +53,7 @@ const { colors } = storeToRefs(githubStore);
           <span
             v-if="repo.language in colors"
             :style="{ backgroundColor: colors[repo.language].color }"
-            class="w-3 h-3 rounded-full relative"
+            class="size-3 rounded-full relative"
           />
 
           <span class="pl-2">{{ repo.language }}</span>
@@ -65,7 +65,7 @@ const { colors } = storeToRefs(githubStore);
         >
           <UIcon
             name="i-octicon-star-16"
-            class="w-4 h-4 mr-1"
+            class="size-4 mr-1"
           />
 
           <span>{{ repo.stargazers_count }}</span>
@@ -77,7 +77,7 @@ const { colors } = storeToRefs(githubStore);
         >
           <UIcon
             name="i-octicon-repo-forked-16"
-            class="w-4 h-4 mr-1"
+            class="size-4 mr-1"
           />
 
           <span>{{ repo.forks }}</span>

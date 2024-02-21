@@ -27,7 +27,7 @@ const { locale } = useI18n();
           <UIcon
             dynamic
             :name="item.icon"
-            class="w-12 h-12"
+            class="size-12"
             :style="{
               color: item.iconColor
             }"

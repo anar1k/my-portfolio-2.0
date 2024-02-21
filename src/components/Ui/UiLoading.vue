@@ -18,7 +18,7 @@ withDefaults(defineProps<IProps>(), {
         <div
           v-for="item in 3"
           :key="item"
-          class="w-3 h-3 bg-gray-700 dark:bg-white rounded-full"
+          class="size-3 bg-gray-700 dark:bg-white rounded-full"
         />
       </div>
     </div>

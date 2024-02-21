@@ -26,7 +26,7 @@ const isDark = computed<boolean>({
     </UTooltip>
 
     <template #fallback>
-      <div class="w-8 h-8" />
+      <div class="size-8" />
     </template>
   </ClientOnly>
 </template>

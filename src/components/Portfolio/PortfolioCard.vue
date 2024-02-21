@@ -43,8 +43,7 @@ const { locale } = useI18n();
         class="absolute
                inset-0
                m-auto
-               h-8
-               w-8
+               size-8
                text-white
                opacity-0
                group-hover:opacity-100

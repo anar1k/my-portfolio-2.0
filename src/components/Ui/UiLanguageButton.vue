@@ -11,7 +11,7 @@ const { locale, setLocale } = useI18n();
     >
       <nuxt-img
         :src="`/images/flags/${locale === 'ru' ? 'russia' : 'usa'}.webp`"
-        class="h-4"
+        class="size-4"
         :alt="locale === 'ru' ? 'RU' : 'EN'"
       />
     </UButton>

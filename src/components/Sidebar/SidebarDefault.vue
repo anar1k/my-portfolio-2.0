@@ -40,7 +40,7 @@ const isShowContacts = ref<boolean>(false);
   <aside class="relative">
     <UCard class="xl:sticky xl:top-16">
       <div class="flex items-center xl:flex-col gap-x-4 sm:gap-6">
-        <div class="w-20 sm:w-32 xl:w-40 h-20 sm:h-32 xl:h-40">
+        <div class="size-20 sm:size-32 xl:size-40">
           <nuxt-img
             class="rounded-full"
             src="/images/avatar.webp"
@@ -117,10 +117,8 @@ const isShowContacts = ref<boolean>(false);
               class="flex gap-x-4 items-center"
             >
               <div
-                class="w-8
-                       sm:w-12
-                       h-8
-                       sm:h-12
+                class="size-8
+                       sm:size-12
                        flex
                        justify-center
                        items-center
