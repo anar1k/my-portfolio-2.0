@@ -1,20 +1,17 @@
 <script setup lang="ts">
 import type { IProject } from '~/types/project';
 
-interface IProps {
-  project: IProject | null
-}
-
-withDefaults(defineProps<IProps>(), {
-  project: null
-});
+defineProps<{
+  img: IProject['img'],
+  title: IProject['title'],
+  category: IProject['category']
+}>();
 
 const { locale } = useI18n();
 </script>
 
 <template>
   <UCard
-    v-if="project"
     :ui="{
       base: 'group duration-200',
       shadow: 'shadow-md dark:shadow-md hover:shadow-primary-400 dark:hover:shadow-primary-700',
@@ -28,7 +25,7 @@ const { locale } = useI18n();
     <div class="relative overflow-hidden rounded-t-2xl">
       <NuxtPicture
         format="webp"
-        :src="project.img"
+        :src="img"
         :img-attrs="{
           class: 'object-cover group-hover:scale-[1.1] h-full w-full transition-transform duration-200 ease-in',
           alt: '',
@@ -57,11 +54,11 @@ const { locale } = useI18n();
 
     <div class="p-4 capitalize leading-5">
       <h4 class="font-medium text-gray-900 dark:text-white group-hover:text-primary">
-        {{ project.title }}
+        {{ title }}
       </h4>
 
       <div class="text-gray-500 dark:text-gray-400 font-light">
-        {{ project.category[locale] }}
+        {{ category[locale] }}
       </div>
     </div>
   </UCard>

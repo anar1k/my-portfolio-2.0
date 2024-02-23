@@ -62,7 +62,9 @@ const changePage = async (newPage: number) => {
         <github-card
           v-for="item in repos"
           :key="item.id"
-          :repo="item"
+          v-bind="item"
+          :url="item.html_url"
+          :stargazers-count="item.stargazers_count"
         />
       </div>
 

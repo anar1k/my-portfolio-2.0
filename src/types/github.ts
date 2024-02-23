@@ -3,7 +3,7 @@ export interface IRepo {
     html_url: string,
     name: string,
     description: string,
-    language: string,
+    language: string | null,
     stargazers_count: number,
     forks: number,
 }

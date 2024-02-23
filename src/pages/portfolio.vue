@@ -44,7 +44,7 @@ const handleCard = (project: IProject) => {
     >
       <li
         v-for="item in projects"
-        :key="item.id"
+        :key="item.id + item.title"
       >
         <button
           :aria-label="item.title"
@@ -52,7 +52,7 @@ const handleCard = (project: IProject) => {
           type="button"
           @click="handleCard(item)"
         >
-          <portfolio-card :project="item" />
+          <portfolio-card v-bind="item" />
         </button>
       </li>
     </ul>

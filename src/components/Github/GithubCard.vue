@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import type { IRepo } from '~/types/github';
 
-interface IProps {
-  repo: IRepo | null
-}
-
-withDefaults(defineProps<IProps>(), {
-  repo: null
-});
+defineProps<{
+  url: IRepo['html_url'],
+  name: IRepo['name'],
+  description: IRepo['description'],
+  language: IRepo['language'],
+  stargazersCount: IRepo['stargazers_count'],
+  forks: IRepo['forks'],
+}>();
 
 const githubStore = useGithubStore();
 const { colors } = storeToRefs(githubStore);
@@ -15,7 +16,6 @@ const { colors } = storeToRefs(githubStore);
 
 <template>
   <UCard
-    v-if="repo"
     :ui="{
       base: 'py-3 px-5',
       body: {
@@ -33,34 +33,34 @@ const { colors } = storeToRefs(githubStore);
         />
 
         <a
-          :href="repo.html_url"
+          :href="url"
           target="_blank"
           class="font-medium text-purple-800 dark:text-primary-200 hover:underline"
         >
-          {{ repo.name }}
+          {{ name }}
         </a>
       </div>
 
       <div class="text-xs mt-2 mb-4">
-        {{ repo.description }}
+        {{ description }}
       </div>
 
       <div class="mt-auto text-xs flex gap-x-4">
         <div
-          v-if="repo.language"
+          v-if="language"
           class="flex items-center"
         >
           <span
-            v-if="repo.language in colors"
-            :style="{ backgroundColor: colors[repo.language].color }"
+            v-if="language in colors"
+            :style="{ backgroundColor: colors[language].color }"
             class="size-3 rounded-full relative"
           />
 
-          <span class="pl-2">{{ repo.language }}</span>
+          <span class="pl-2">{{ language }}</span>
         </div>
 
         <div
-          v-if="repo.stargazers_count"
+          v-if="stargazersCount"
           class="flex items-center hover:text-primary"
         >
           <UIcon
@@ -68,11 +68,11 @@ const { colors } = storeToRefs(githubStore);
             class="size-4 mr-1"
           />
 
-          <span>{{ repo.stargazers_count }}</span>
+          <span>{{ stargazersCount }}</span>
         </div>
 
         <div
-          v-if="repo.forks"
+          v-if="forks"
           class="flex items-center hover:text-primary"
         >
           <UIcon
@@ -80,7 +80,7 @@ const { colors } = storeToRefs(githubStore);
             class="size-4 mr-1"
           />
 
-          <span>{{ repo.forks }}</span>
+          <span>{{ forks }}</span>
         </div>
       </div>
     </div>
