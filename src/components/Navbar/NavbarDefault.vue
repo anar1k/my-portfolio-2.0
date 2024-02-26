@@ -4,7 +4,7 @@ import type { TIcon } from '~/types/icon';
 const { t } = useI18n();
 
 interface ILink {
-  href: string,
+  name: string,
   label: string,
   icon: TIcon
 }
@@ -12,22 +12,22 @@ interface ILink {
 const links = computed<ILink[]>(() => (
   [
     {
-      href: '/',
+      name: 'index',
       label: t('title.about'),
       icon: 'i-heroicons-home'
     },
     {
-      href: '/resume',
+      name: 'resume',
       label: t('title.resume'),
       icon: 'i-heroicons-document'
     },
     {
-      href: '/portfolio',
+      name: 'portfolio',
       label: t('title.portfolio'),
       icon: 'i-heroicons-briefcase'
     },
     {
-      href: '/github',
+      name: 'github',
       label: 'GitHub',
       icon: 'i-simple-icons-github'
     }
@@ -50,7 +50,7 @@ withDefaults(defineProps<IProps>(), {
       :key="item.label + index"
     >
       <ULink
-        :to="item.href"
+        :to="{ name: item.name }"
         class="flex flex-col items-center transition-colors"
         active-class="text-primary"
         inactive-class="text-gray-700 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-500"
